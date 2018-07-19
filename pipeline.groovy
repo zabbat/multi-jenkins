@@ -4,7 +4,7 @@ pipeline {
 	stages {
 		stage('pipeline'){
 			steps{
-				sh 'steps'
+				sh 'running'
 			}
 		}
 	}
