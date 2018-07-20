@@ -5,7 +5,7 @@ pipeline {
 		stage('pipeline'){
 			steps{
 				echo 'running'
-				sh 'failme'
+				echo 'pass'
 			}
 		}
 	}
