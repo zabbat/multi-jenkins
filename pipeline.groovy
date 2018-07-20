@@ -4,8 +4,14 @@ pipeline {
 	stages {
 		stage('pipeline'){
 			steps{
-				sh 'running'
+				echo 'running'
+				echo 'pass'
 			}
+		}
+	}
+	post{
+		cleanup{
+			echo 'cleanup'
 		}
 	}
 }
