@@ -1,11 +1,11 @@
 #!/usr/bin/env groovy
 pipeline {
 	agent any
-	options{skipDefaultCheckout()}
+	options{checkoutToSubdirectory('source')}
 	stages {
 		stage('pipeline'){
 			steps{
-				checkout scm
+		
 				echo 'running'
 				echo 'pass'
 			}
@@ -14,6 +14,7 @@ pipeline {
 	post{
 		cleanup{
 			echo 'cleanup'
+			sh 'rm -r source'
 		}
 	}
 }
