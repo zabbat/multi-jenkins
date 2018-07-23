@@ -14,7 +14,7 @@ pipeline {
 	post{
 		cleanup{
 			echo 'cleanup'
-			sh 'rm -r source'
+			sh 'git clean -x -f -d'
 		}
 	}
 }
