@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 pipeline {
 	agent any
-	options{skipDefaultCheckput()}
+	options{skipDefaultCheckout()}
 	stages {
 		stage('pipeline'){
 			steps{
