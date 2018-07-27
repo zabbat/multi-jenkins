@@ -13,6 +13,7 @@ pipeline {
 	}
 	post{
 		cleanup{
+			echo env.BRANCH_NAME
 			echo 'cleanup'
 			sh 'git clean -x -f -d'
 		}
