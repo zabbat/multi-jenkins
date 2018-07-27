@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 pipeline {
 	agent any
-	options{checkoutToSubdirectory('source')}
+	
 	stages {
 		stage('pipeline'){
 			steps{
