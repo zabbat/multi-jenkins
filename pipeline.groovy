@@ -13,7 +13,9 @@ pipeline {
 	}
 	post{
 		cleanup{
-			echo env.BRANCH_NAME
+			if(env.BRANCH_NAME == 'develop'){
+				echo 'done with develop'
+			}
 			echo 'cleanup'
 			sh 'git clean -x -f -d'
 		}
